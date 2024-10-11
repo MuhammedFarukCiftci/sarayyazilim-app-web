@@ -1,0 +1,125 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Varsayılan durumda link */
+.underline-animation {
+    position: relative;
+    color: white;  /* Başlangıç rengi beyaz */
+}
+
+/* Link hover edildiğinde underline büyür */
+.underline-animation:hover span,
+.underline-animation.active span {
+    width: 100%;
+    left: 0;
+}
+
+/* Link hover edildiğinde ve aktif olduğunda yazı rengi değişir */
+.underline-animation:hover,
+.underline-animation.active {
+    color: yellow;  /* Tıkladığında ve hover olduğunda sarı renge dönüşsün */
+}
+
+/* Underline animasyonu */
+.underline-animation span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: yellow;
+    transition: all 0.5s ease;
+}
+
+.active::before {
+    width: 100%;
+    left: 0;
+    background-color: #ffda47;
+}
+.scroll-to-top {
+width: 50px;
+height: 50px;
+border-radius: 50%; 
+transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+opacity: 0;
+transform: translateY(100px);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.scroll-to-top.show {
+opacity: 1;
+transform: translateY(0);
+}
+.whatsapp-btn {
+position: fixed;
+bottom: 1rem;
+right: 1rem;
+background-color: #25D366; 
+color: #ffffff;
+border-radius: 50%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+width: 56px;
+height: 56px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 24px;
+z-index: 1000;
+text-decoration: none; 
+}
+.whatsapp-btn img {
+width: 24px;
+height: 24px;
+}
+.whatsapp-btn:hover {
+background-color: #128C7E;
+}
+
+.bounce {
+animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-20px);
+}
+70% {
+transform: translateY(-10px);
+}
+90% {
+transform: translateY(-5px);
+}
+}
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.project-card {
+    transition: transform 0.3s ease;
+    background: linear-gradient(to bottom right, #fff, #f3f4f6);
+  }
+
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .project-card img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .project-card:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }

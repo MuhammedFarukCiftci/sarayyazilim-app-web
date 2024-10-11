@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projelerimiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header Section -->
+<section>
+    <header id="header" class="flex flex-col md:flex-row justify-between items-center p-6 bg-gray-900 shadow-lg fixed top-0 left-0 w-full z-10 transition-transform duration-300 ease-in-out">
+        <!-- Logo and Title -->
+        <div class="flex items-center space-x-4 mb-4 md:mb-0 whitespace-nowrap">
+            <div>
+                <h1 class="text-3xl font-extrabold text-teal-400 hover:text-teal-300 transition-colors duration-300">Muhammed Çiftçi</h1>
+                <p class="text-sm text-gray-400">Web Developer & Designer</p>
+            </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex justify-center w-full">
+            <ul class="flex space-x-10 font-semibold text-gray-200">
+                <li>
+                    <a href="index.html #" class="relative group" onclick="setActive(this)">
+                        Home
+                        <span class="absolute bottom-0 left-1/2 w-0 group-hover:w-full group-hover:left-0 h-[2px] bg-teal-400 transition-all duration-500"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html #services" class="relative group" onclick="setActive(this)">
+                        Services
+                        <span class="absolute bottom-0 left-1/2 w-0 group-hover:w-full group-hover:left-0 h-[2px] bg-teal-400 transition-all duration-500"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html #about" class="relative group" onclick="setActive(this)">
+                        About
+                        <span class="absolute bottom-0 left-1/2 w-0 group-hover:w-full group-hover:left-0 h-[2px] bg-teal-400 transition-all duration-500"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html" class="relative group" onclick="setActive(this)">
+                        Projects
+                        <span class="absolute bottom-0 left-1/2 w-0 group-hover:w-full group-hover:left-0 h-[2px] bg-teal-400 transition-all duration-500"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html #contact" class="relative group" onclick="setActive(this)">
+                        Contact
+                        <span class="absolute bottom-0 left-1/2 w-0 group-hover:w-full group-hover:left-0 h-[2px] bg-teal-400 transition-all duration-500"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Button and Social Media -->
+        <div class="flex items-center space-x-6">
+            <!-- Social Media Icons -->
+            <div class="hidden lg:flex space-x-4">
+                <a href="https://facebook.com" target="_blank" class="text-gray-200 hover:text-teal-300 transition-colors duration-300">
+                    <i class="fab fa-facebook-f text-lg"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="text-gray-200 hover:text-teal-300 transition-colors duration-300">
+                    <i class="fab fa-twitter text-lg"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-gray-200 hover:text-teal-300 transition-colors duration-300">
+                    <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-gray-200 hover:text-teal-300 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-lg"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="relative flex items-center justify-center w-14 h-14 bg-gray-800 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl z-20 lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="animated-menu" class="fixed inset-x-0 bottom-0 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-600 text-white p-8 rounded-t-3xl shadow-2xl transform translate-y-full transition-transform duration-700 ease-in-out w-full max-w-lg mx-auto z-10">
+        <div class="text-center">
+            <h2 class="text-2xl font-bold text-white mb-6">Menu</h2>
+        </div>
+        <div class="space-y-4">
+            <a class="block hover:bg-gray-900 px-6 py-4 rounded-full text-center font-semibold transition-all duration-500 ease-in-out transform hover:scale-105" href="index.html #" onclick="setActiveAndClose(this)">
+                Home
+            </a>
+            <a class="block hover:bg-gray-900 px-6 py-4 rounded-full text-center font-semibold transition-all duration-500 ease-in-out transform hover:scale-105" href="index.html #services" onclick="setActiveAndClose(this)">
+                Services
+            </a>
+            <a class="block hover:bg-gray-900 px-6 py-4 rounded-full text-center font-semibold transition-all duration-500 ease-in-out transform hover:scale-105" href="index.html #about" onclick="setActiveAndClose(this)">
+                About
+            </a>
+            <a class="block hover:bg-gray-900 px-6 py-4 rounded-full text-center font-semibold transition-all duration-500 ease-in-out transform hover:scale-105" href="projects.html" onclick="setActiveAndClose(this)">
+                Projects
+            </a>
+            <a class="block hover:bg-gray-900 px-6 py-4 rounded-full text-center font-semibold transition-all duration-500 ease-in-out transform hover:scale-105" href="index.html #contact" onclick="setActiveAndClose(this)">
+                Contact
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const animatedMenu = document.getElementById('animated-menu');
+
+        // Toggle mobile menu
+        menuBtn.addEventListener('click', () => {
+            animatedMenu.classList.toggle('translate-y-full');
+            animatedMenu.classList.toggle('translate-y-0');
+        });
+
+        // Close menu when a link is clicked
+        function setActiveAndClose(element) {
+            animatedMenu.classList.add('translate-y-full');
+            animatedMenu.classList.remove('translate-y-0');
+        }
+    </script>
+</section>
+
+<!-- Home Page -->
+<section class=" bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 py-12">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12"><br><br><br>
+      <h1 class="text-5xl font-bold text-white transition-transform duration-500 transform hover:scale-105">Our projects</h1>
+      <p class="mt-4 text-lg text-gray-400">Prominent projects we have realized in the field of web and graphic design.</p>
+    </div>
+
+    <div class="flex justify-center space-x-4 mb-12">
+      <button class="category-btn px-6 py-3 bg-gray-800 text-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:bg-gray-700" onclick="filterProjects('all')">All Projects</button>
+      <button class="category-btn px-6 py-3 bg-gray-800 text-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:bg-gray-700" onclick="filterProjects('web')">Website</button>
+      <button class="category-btn px-6 py-3 bg-gray-800 text-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:bg-gray-700" onclick="filterProjects('graphic')">Graphic Design</button>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="project-card overflow-hidden rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105" data-category="web">
+        <img src="https://t3.ftcdn.net/jpg/03/11/14/56/240_F_311145638_NhwRBNgkm5U3ncRdJqh3ebnXSSR2FiiT.jpg" alt="Web Tasarım Projesi 1" class="w-full h-48 object-cover transition-transform duration-500 transform hover:scale-110">
+        <div class="p-6 bg-gray-800">
+          <h2 class="text-2xl font-semibold text-white mb-3">Web Project 1</h2>
+          <p class="text-gray-300 mb-4">Web design project developed with a modern interface...</p>
+          <a href="" class="text-blue-400 hover:underline transition duration-300">Review the Project</a>
+        </div>
+      </div>
+
+      <div class="project-card overflow-hidden rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105" data-category="graphic">
+        <img src="https://t4.ftcdn.net/jpg/04/31/64/15/240_F_431641524_ll6KvJOxTEbp7JeMWCP8BkbxqQFs0Yfc.jpg" alt="Grafik Tasarım Projesi 1" class="w-full h-48 object-cover transition-transform duration-500 transform hover:scale-110">
+        <div class="p-6 bg-gray-800">
+          <h2 class="text-2xl font-semibold text-white mb-3">Graphic Project 1</h2>
+          <p class="text-gray-300 mb-4">Project that offers creative graphic design solutions...</p>
+          <a href="" class="text-green-400 hover:underline transition duration-300">Review the Project</a>
+        </div>
+      </div>
+
+      <div class="project-card overflow-hidden rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105" data-category="web">
+        <img src="https://t3.ftcdn.net/jpg/02/20/35/96/240_F_220359681_uD7IF1ZSKrotBNyGdhCsOBPfsHXOBAZv.jpg" alt="Web Tasarım Projesi 2" class="w-full h-48 object-cover transition-transform duration-500 transform hover:scale-110">
+        <div class="p-6 bg-gray-800">
+          <h2 class="text-2xl font-semibold text-white mb-3">Web Project 2</h2>
+          <p class="text-gray-300 mb-4">Web design project developed with a modern interface...</p>
+          <a href="" class="text-blue-400 hover:underline transition duration-300">Review the Project</a>
+        </div>
+      </div>
+
+      <div class="project-card overflow-hidden rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105" data-category="graphic">
+        <img src="https://t4.ftcdn.net/jpg/01/20/87/03/240_F_120870339_uecHqE7nxqJToa30LbSDx1HRRXfeiAZT.jpg" alt="Grafik Tasarım Projesi 2" class="w-full h-48 object-cover transition-transform duration-500 transform hover:scale-110">
+        <div class="p-6 bg-gray-800">
+          <h2 class="text-2xl font-semibold text-white mb-3">>Graphic Project 2</h2>
+          <p class="text-gray-300 mb-4">Project that offers creative graphic design solutions...</p>
+          <a href="" class="text-green-400 hover:underline transition duration-300">Review the Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filterProjects(category) {
+      const projects = document.querySelectorAll('.project-card');
+
+      projects.forEach(project => {
+        const projectCategory = project.getAttribute('data-category');
+
+        if (category === 'all' || projectCategory === category) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</section>
+
+<!-- WhatsApp -->
+<section>
+  <a href="https://wa.me/905075621923" class="whatsapp-btn" target="_blank" title="WhatsApp ile iletişime geç">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+  </a>
+</section>
+
+<!-- Scroll Button -->
+<section>
+      <button id="scrollButton" class="scroll-to-top fixed bottom-20 right-4 bg-gray-800 text-white shadow-lg hover:bg-gray-700 focus:outline-none">
+          &#x25B2;
+      </button>
+
+      <script>
+          const scrollButton = document.getElementById('scrollButton');
+
+          window.addEventListener('scroll', function() {
+              if (window.scrollY > 200) {
+                  scrollButton.classList.add('show');
+              } else {
+                  scrollButton.classList.remove('show');
+              }
+          });
+
+          scrollButton.addEventListener('click', function() {
+              document.body.classList.add('scrolling');
+              document.documentElement.classList.add('scrolling');
+
+              window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+              });
+
+              setTimeout(function() {
+                  document.body.classList.remove('scrolling');
+                  document.documentElement.classList.remove('scrolling');
+              }, 500);
+          });
+      </script>
+</section>
+
+<!-- Footer -->
+<section>
+    <footer class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 py-10 text-gray-200">
+        <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- About Us -->
+            <div class="mb-6">
+                <h2 class="text-yellow-400 text-2xl font-bold mb-3">About Us</h2>
+                <p class="text-gray-400 text-base leading-relaxed">
+                    I'm a dedicated web developer crafting dynamic web experiences with a focus on design and performance. Always looking for new challenges and innovation.
+                </p>
+            </div>
+
+            <!-- Services -->
+            <div class="mb-6">
+                <h2 class="text-yellow-400 text-2xl font-bold mb-3">Services</h2>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 relative transition duration-300 group">
+                            Web Development
+                            <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full group-hover:left-0 transition-all duration-500 ease-out"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 relative transition duration-300 group">
+                            Graphic Design
+                            <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full group-hover:left-0 transition-all duration-500 ease-out"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="mb-6">
+                <h2 class="text-yellow-400 text-2xl font-bold mb-3">Get In Touch</h2>
+                <p class="text-gray-400 text-base leading-relaxed mb-2">
+                    Email: 
+                    <a href="mailto:muhammed@example.com" class="text-yellow-400 hover:text-yellow-300 relative transition duration-300 group">
+                        muhammedcifttci.24@gmail.com
+                        <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full group-hover:left-0 transition-all duration-500 ease-out"></span>
+                    </a>
+                </p>
+                <p class="text-gray-400 text-base leading-relaxed">
+                    Phone: 
+                    <a href="tel:+1234567890" class="text-yellow-400 hover:text-yellow-300 relative transition duration-300 group">
+                        +90 507 562 19 23
+                        <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full group-hover:left-0 transition-all duration-500 ease-out"></span>
+                    </a>
+                </p>
+                <div class="flex justify-center md:justify-start space-x-6 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition duration-300">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto mt-10 px-4 lg:px-8 border-t border-gray-600 pt-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo or Branding (optional) -->
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-yellow-400 text-lg font-bold hover:text-yellow-300 transition duration-300">Muhammed Faruk Çiftçi</a>
+                </div>
+                <!-- Copyright -->
+                <p class="text-gray-400 text-xs text-center md:text-right">
+                    © 2024 Muhammed Faruk Çiftçi. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</section>
+
+
+</body>
+</html>
